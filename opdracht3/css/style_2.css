@@ -1,0 +1,224 @@
+/*csslint empty-rules:false, ids:false, outline-none:false, order-alphabetical:false, fallback-colors: false, unique-headings: false, box-model: false, box-sizing: false, qualified-headings: false, gradients: false, star-property-hack: false, import: false, universal-selector: false, unqualified-attributes: false, overqualified-elements: false*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* FONT */
+
+@font-face {
+    font-family: 'DFDS-bold';
+    src: url("../font/dfds-bold.eot");
+    src: url("../font/dfds-bold.eot?#iefix") format("embedded-opentype"), url("../font/dfds-bold.woff") format("woff"), url("../font/dfds-bold.ttf") format("truetype"), url("../font/dfds-bold.svg#dfds-bold") format("svg");
+    font-style: normal
+}
+
+@font-face {
+    font-family: 'DFDS-light';
+    src: url("../font/dfds-light.eot");
+    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/fonts/dfds-light.woff") format("woff"), url("../font/fds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
+    font-weight: 300;
+    font-style: normal
+}
+
+/* ALGEMEEN */
+
+body {
+    background-color: #eaedee;
+}
+
+header {
+    background-color: white;
+}
+
+h1 {
+    font-family: "DFDS-bold";
+    font-size: 5vh;
+    text-transform: uppercase;
+    color: #003251;
+}
+
+h1 span {
+    font-family: "DFDS";
+    color: #8fbfe6;
+    text-transform: none;
+}
+
+header img {
+    height: 6vh;
+}
+
+header a img {
+    height: 4vh;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+    transition: border-left 0.2s 0.3s,
+                border-top 0.2s 0.2s,
+                border-right 0.2s 0.1s,
+                border-bottom 0.2s;
+}
+
+input[type="image"] {
+    height: 4vh;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+}
+
+input {
+    border-right: 0.1em solid hsla(201,94%,13%,1);
+    border-bottom: 0.1em solid hsla(201,94%,13%,1);
+    border-left: 0.1em solid hsla(201,94%,13%,1);
+    border-top: 0.1em solid hsla(201,94%,13%,1);
+    transition: border-left 0.2s 0.3s,
+                border-top 0.2s 0.2s,
+                border-right 0.2s 0.1s,
+                border-bottom 0.2s;
+}
+
+input:hover,
+section article:hover,
+header a img:hover {
+    border-right: 0.1em solid hsla(206,63%,73%,1);
+    border-bottom: 0.1em solid hsla(206,63%,73%,1);
+    border-left: 0.1em solid hsla(206,63%,73%,1);
+    border-top: 0.1em solid hsla(206,63%,73%,1);
+    transition: border-left 0.2s,
+                border-top 0.2s 0.1s,
+                border-right 0.2s 0.2s,
+                border-bottom 0.2s 0.3s;
+}
+
+/* INDEX.HTML */
+
+main {
+    margin-left: 2em;
+}
+
+section article {
+    width: 20vw;
+}
+
+section article {
+    border-right: 0.1em solid hsla(255,100%,100%,0);
+    border-bottom: 0.1em solid hsla(255,100%,100%,0);
+    border-left: 0.1em solid hsla(255,100%,100%,0);
+    border-top: 0.1em solid hsla(255,100%,100%,0);
+    transition: border-left 0.2s 0.3s,
+                border-top 0.2s 0.2s,
+                border-right 0.2s 0.1s,
+                border-bottom 0.2s;
+}
+
+a article {
+    background-color: white;
+}
+
+/* VERHAAL.HTML */
+
+header + main {
+    width: 40vw;
+    margin-left: 30vw;
+}
+
+main > article h2 {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.999em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #003251;
+}
+
+main > article p {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.141em;
+    line-height: 1.712em;
+    margin-bottom: 1.141em;
+}
+
+main > article footer p {
+    font-family:"DFDS", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.141em;
+    line-height: 1.712em;
+    padding: 0.571em 0;
+    text-align: right;
+    color: #85bce9;
+    column-count: 1;
+}
+
+footer + p::first-letter {
+    float: left;
+    font-size: 3.7em;
+    line-height: 0.856em;
+    margin-right: 0.05em;
+}
+
+footer a {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #005184;
+}
+
+a:hover {
+    color: #003251;
+}
+
+*::selection {
+    background: #85bce9;
+}
+
+time::selection,
+span::selection {
+    color: #003251;
+}
+
+
