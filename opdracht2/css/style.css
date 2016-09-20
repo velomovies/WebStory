@@ -65,7 +65,7 @@ table {
 @font-face {
     font-family: 'DFDS-light';
     src: url("../font/dfds-light.eot");
-    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/fonts/dfds-light.woff") format("woff"), url("../font/fds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
+    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/dfds-light.woff") format("woff"), url("../font/dfds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
     font-weight: 300;
     font-style: normal
 }

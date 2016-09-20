@@ -3,16 +3,21 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Verhalen</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <img src="images/logo.png" alt="logo DFDS"><h1>DFDS <span>Verhalen</span></h1>
+        <div>
+            <img src="images/logo.png" alt="logo DFDS">
+            <h1>DFDS <span>Verhalen</span></h1>
+        </div>
         <nav>
             <form action="#">
-                <label for="search">Zoeken</label><input id="search" type="search" required placeholder="Zoeken">
+                <label for="search">Zoeken</label>
+                <input id="search" type="search" required placeholder="Zoeken">
                 <input type="image" src="images/search.svg" alt="Submit">
             </form>
             <a href="Account"><img src="images/account.svg" alt="Persoon"></a>
@@ -20,110 +25,189 @@
     </header>
     <section>
         <h2>Ik heb</h2>
-        <form><label for="aantal">Aantal minuten</label><input id="aantal" type="number"></form>
+        <form>
+            <label for="aantal">Aantal minuten</label>
+            <input id="aantal" type="number">
+        </form>
         <h2>Minuten</h2>
     </section>
     <main>
         <section>
             <h3>Gebaseerd op uw voorkeur</h3>
-            <a href="#verhaal">
-               <article>
-                <footer class="data">
-                    <img src="source" alt="Klok">
-                    <p>10min.</p>
-                    <img src="source" alt="Persoon">
-                    <p>109</p>
-                    <img src="source" alt="Datum">
-                    <p>09-09-2016</p>
-                </footer>
-                    <h4>TITEL VERHAAL</h4>
-                    <p>Verhaal</p>
-                </article>
-            </a>
-            <a href="#verhaal">
-               <article>
-                <footer class="data">
-                    <img src="source" alt="Klok">
-                    <p>10min.</p>
-                    <img src="source" alt="Persoon">
-                    <p>109</p>
-                    <img src="source" alt="Datum">
-                    <p>09-09-2016</p>
-                </footer>
-                    <h4>TITEL VERHAAL</h4>
-                    <p>Verhaal</p>
-                </article>
-            </a>
-            <a href="#verhaal">
-               <article>
-                <footer class="data">
-                    <img src="source" alt="Klok">
-                    <p>10min.</p>
-                    <img src="source" alt="Persoon">
-                    <p>109</p>
-                    <img src="source" alt="Datum">
-                    <p>09-09-2016</p>
-                </footer>
-                    <h4>TITEL VERHAAL</h4>
-                    <p>Verhaal</p>
-                </article>
-            </a>
+            <div>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <time datetime="2016-09-12">12 September 2016</time>
+                        </footer>
+                        <h4>Stijloefeningen (88) – Klumperbeven</h4>
+                        <p>Ik bus de stap uit en been met gepaste zwind over het stationsplein. In mijn zoon ligt de kinderwagen te slapen. Het pijpt regenstelen en er guurt een winderige waai. De mensen keren in zichzelf gelopen, kraag in de kop, grond ...</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+            </div>
         </section>
         <section>
-            <h3>Verhalen</h3>
-            <nav>
-                <ul>
-                    <li><a href="#">sorteer</a>
-                        <ul>
-                            <li><a href="Sort">Lengte <img src="source" alt="Pijl"></a></li>
-                            <li><a href="Sort">Datum <img src="source" alt="Pijl"></a></li>
-                            <li><a href="Sort">Populariteit <img src="source" alt="Pijl"></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <a href="#verhaal">
-               <article>
-                <footer class="data">
-                    <img src="source" alt="Klok">
-                    <p>10min.</p>
-                    <img src="source" alt="Persoon">
-                    <p>109</p>
-                    <img src="source" alt="Datum">
-                    <p>09-09-2016</p>
-                </footer>
-                    <h4>TITEL VERHAAL</h4>
-                    <p>Verhaal</p>
-                </article>
-            </a>
-            <a href="#verhaal">
-               <article>
-                <footer class="data">
-                    <img src="source" alt="Klok">
-                    <p>10min.</p>
-                    <img src="source" alt="Persoon">
-                    <p>109</p>
-                    <img src="source" alt="Datum">
-                    <p>09-09-2016</p>
-                </footer>
-                    <h4>TITEL VERHAAL</h4>
-                    <p>Verhaal</p>
-                </article>
-            </a>
-            <a href="#verhaal">
-               <article>
-                <footer class="data">
-                    <img src="source" alt="Klok">
-                    <p>10min.</p>
-                    <img src="source" alt="Persoon">
-                    <p>109</p>
-                    <img src="source" alt="Datum">
-                    <p>09-09-2016</p>
-                </footer>
-                    <h4>TITEL VERHAAL</h4>
-                    <p>Verhaal</p>
-                </article>
-            </a>
+            <div>
+                <h3>Verhalen</h3>
+                <nav>
+                    <ul>
+                        <li><a href="#">sorteer</a>
+                            <ul>
+                                <li><a href="Sort">Lengte <img src="source" alt="Pijl"></a></li>
+                                <li><a href="Sort">Datum <img src="source" alt="Pijl"></a></li>
+                                <li><a href="Sort">Populariteit <img src="source" alt="Pijl"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+                <a href="#verhaal">
+                    <article>
+                        <footer class="data">
+                            <img src="source" alt="Klok">
+                            <p>10min.</p>
+                            <img src="source" alt="Persoon">
+                            <p>109</p>
+                            <img src="source" alt="Datum">
+                            <p>09-09-2016</p>
+                        </footer>
+                        <h4>TITEL VERHAAL</h4>
+                        <p>Verhaal</p>
+                    </article>
+                </a>
+            </div>
         </section>
     </main>
     <script src="js/main.js"></script>

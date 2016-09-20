@@ -59,15 +59,15 @@ table {
     font-family: 'DFDS-bold';
     src: url("../font/dfds-bold.eot");
     src: url("../font/dfds-bold.eot?#iefix") format("embedded-opentype"), url("../font/dfds-bold.woff") format("woff"), url("../font/dfds-bold.ttf") format("truetype"), url("../font/dfds-bold.svg#dfds-bold") format("svg");
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'DFDS-light';
     src: url("../font/dfds-light.eot");
-    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/fonts/dfds-light.woff") format("woff"), url("../font/fds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
+    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/dfds-light.woff") format("woff"), url("../font/dfds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
     font-weight: 300;
-    font-style: normal
+    font-style: normal;
 }
 
 /* ALGEMEEN */
@@ -78,35 +78,43 @@ body {
 
 header {
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+}
+
+header div {
+    display: flex;
+    margin: 1vh 1vw 1vh 1vw;
 }
 
 h1 {
-    font-family: "DFDS-bold";
-    font-size: 5vh;
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 3.3vh;
+    margin-top: 1.1vh;
+    margin-left: -.5vh;
     text-transform: uppercase;
     color: #003251;
-    display: inline-block;
 }
 
 h1 span {
-    font-family: "DFDS";
+    font-family:"DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     color: #8fbfe6;
+    margin-left: -.5vh;
     text-transform: none;
 }
 
-header img {
-    display: inline-block;
-    height: 6vh;
-    vertical-align: sub;
-}
-
-header nav,
-header nav form {
-    display: inline-block;
+header div img {
+    height: 5vh;
+    margin-left: 5vw;
 }
 
 header a img {
     height: 4vh;
+    margin: 2vh 2vw 1vh 1vw;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
     transition: border-left 0.2s 0.3s,
@@ -117,9 +125,9 @@ header a img {
 
 input[type="image"] {
     height: 4vh;
+    margin: 2vh 0 1vh 0;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
-    vertical-align: sub;
 }
 
 input {
@@ -146,27 +154,68 @@ header a img:hover {
                 border-bottom 0.2s 0.3s;
 }
 
-[for="search"],
-[for="aantal"] {
+label[for="search"] + input {
+    display: none;
+}
+
+label[for="search"] + input + input:hover {
+    display: flex;
+}
+
+label[for="aantal"],
+label[for="search"] {
     display: none;
 }
 
 /* INDEX.HTML */
 
-main {
-    margin-left: 2em;
-}
-
-section main {
+header + section {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: #003251;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2vh 0;
+}
+
+section form input {
+    width: 2.7em;
+    height: 1.8em;
+    background-color: #eaedee;
+    border-radius: .2em;
+}
+
+section form {
+    margin-top: -.21em;
+}
+
+section h2 {
+    margin: 0 .2em 0 .2em;
+}
+
+section h3 {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    color: #003251;
+}
+
+main section div {
+    display: flex;
+
+}
+
+main section + section div {
+    flex-wrap: wrap;
 }
 
 section article {
-    width: 20vw;
-    display: inline-block;
-}
-
-section article {
+    background-color: white;
+    margin: 1em;
+    padding: .5em;
+    width: 20em;
+    height: 15em;
     border-right: 0.1em solid hsla(255,100%,100%,0);
     border-bottom: 0.1em solid hsla(255,100%,100%,0);
     border-left: 0.1em solid hsla(255,100%,100%,0);
@@ -177,20 +226,21 @@ section article {
                 border-bottom 0.2s;
 }
 
-a article {
+main section + section {
     background-color: white;
 }
 
-/*
-@media(max-width: 620px) {
-
-    section article {
-        width: 80vw;
-        display: block;
-    }
+section + section > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
 
 }
-*/
+
+main section + section article {
+    background-color: #eaedee;
+    height: 20em;
+}
+
 /* VERHAAL.HTML */
 
 header + main {
@@ -214,7 +264,7 @@ main > article p {
 }
 
 main > article footer p {
-    font-family:"DFDS", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family:"DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.141em;
     line-height: 1.712em;
     padding: 0.571em 0;

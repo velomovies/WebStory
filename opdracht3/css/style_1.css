@@ -65,7 +65,7 @@ table {
 @font-face {
     font-family: 'DFDS-light';
     src: url("../font/dfds-light.eot");
-    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/fonts/dfds-light.woff") format("woff"), url("../font/fds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
+    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/dfds-light.woff") format("woff"), url("../font/dfds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
     font-weight: 300;
     font-style: normal
 }
@@ -85,6 +85,7 @@ h1 {
     font-size: 5vh;
     text-transform: uppercase;
     color: #003251;
+    display: inline-block;
 }
 
 h1 span {
@@ -94,7 +95,14 @@ h1 span {
 }
 
 header img {
+    display: inline-block;
     height: 6vh;
+    vertical-align: sub;
+}
+
+header nav,
+header nav form {
+    display: inline-block;
 }
 
 header a img {
@@ -111,6 +119,7 @@ input[type="image"] {
     height: 4vh;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
+    vertical-align: sub;
 }
 
 input {
@@ -137,14 +146,24 @@ header a img:hover {
                 border-bottom 0.2s 0.3s;
 }
 
+[for="search"],
+[for="aantal"] {
+    display: none;
+}
+
 /* INDEX.HTML */
 
 main {
     margin-left: 2em;
 }
 
+section main {
+    display: flex;
+}
+
 section article {
     width: 20vw;
+    display: inline-block;
 }
 
 section article {
@@ -162,6 +181,16 @@ a article {
     background-color: white;
 }
 
+/*
+@media(max-width: 620px) {
+
+    section article {
+        width: 80vw;
+        display: block;
+    }
+
+}
+*/
 /* VERHAAL.HTML */
 
 header + main {
