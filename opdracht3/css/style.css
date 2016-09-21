@@ -91,7 +91,7 @@ body {
 
 h1 {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 3.3vh;
+    font-size: 4vh;
     margin-top: 1.1vh;
     margin-left: -.5vh;
     text-transform: uppercase;
@@ -127,12 +127,12 @@ header div {
 }
 
 header div img {
-    height: 5vh;
+    height: 6vh;
     margin-left: 5vw;
 }
 
 header a img {
-    height: 4vh;
+    height: 5vh;
     margin: 2vh 2vw 1vh 1vw;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
@@ -149,7 +149,7 @@ header a img {
 */
 
 input[type="image"] {
-    height: 4vh;
+    height: 5vh;
     margin: 2vh 0 1vh 0;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
@@ -164,19 +164,6 @@ input {
                 border-top 0.2s 0.2s,
                 border-right 0.2s 0.1s,
                 border-bottom 0.2s;
-}
-
-input:hover,
-section article:hover,
-header a img:hover {
-    border-right: 0.1em solid hsla(206,63%,73%,1);
-    border-bottom: 0.1em solid hsla(206,63%,73%,1);
-    border-left: 0.1em solid hsla(206,63%,73%,1);
-    border-top: 0.1em solid hsla(206,63%,73%,1);
-    transition: border-left 0.2s,
-                border-top 0.2s 0.1s,
-                border-right 0.2s 0.2s,
-                border-bottom 0.2s 0.3s;
 }
 
 label[for="search"] + input + input:hover {
@@ -226,18 +213,20 @@ section h2 {
 
 section h3 {
     font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.1em;
+    font-size: .8em;
     color: #003251;
-    margin: 1em 0 -.5em 2vw;
+    margin: 1em 0 -.9em 2vw;
 }
 
 section div h3 {
     margin-left: 4vw;
+    margin-top: 2em;
 }
 
 section h4 {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.9em;
+    font-size: 1.5em;
+    margin: .3em 0;
     text-transform: uppercase;
     color: #003251;
 }
@@ -245,7 +234,13 @@ section h4 {
 section p,
 footer img + time {
     font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
     color: #003251;
+}
+
+section footer div p,
+footer img + time {
+    color: #eaedee;
 }
 
 main section div {
@@ -259,25 +254,32 @@ section > h3 + div {
 }
 
 section > h3 + div article {
+    display: flex;
+    flex-direction: column-reverse;
     background-color: white;
-    margin: 1em .5em 1em .5em;
-    padding: .5em;
-    width: 85vw;
-    height: 40vh;
-    border-right: 0.1em solid hsla(255,100%,100%,0);
-    border-bottom: 0.1em solid hsla(255,100%,100%,0);
-    border-left: 0.1em solid hsla(255,100%,100%,0);
-    border-top: 0.1em solid hsla(255,100%,100%,0);
+    padding: 0 1em 1em;
+    background-image: url(../images/voorkeuren.png);
+    background-size: cover;
+    background-position: center;
+    border-right: 0.1em solid #eaedee;
+    border-bottom: 0.1em solid #eaedee;
+    border-left: 0.1em solid #eaedee;
+    border-top: 0.1em solid #eaedee;
     transition: border-left 0.2s 0.3s,
                 border-top 0.2s 0.2s,
                 border-right 0.2s 0.1s,
                 border-bottom 0.2s;
-    background-image: url(../images/voorkeuren.png);
-    background-size: cover;
+    margin: 1em .5em 1em .5em;
+    width: 85vw;
+    height: 40vh;
 }
 
 section div a {
     text-decoration: none;
+}
+
+section > h3 + div article footer + div {
+    flex-direction: column;
 }
 
 div footer {
@@ -304,28 +306,35 @@ main section + section div {
     flex-wrap: wrap;
 }
 
+main section + section footer + div {
+    flex-direction: column;
+}
+
 main section + section div:nth-child(1)  {
     align-items: baseline;
-    margin-bottom: .5em;
+    margin: .5em .2em .2em .2em;
 }
 
 section + section article {
+    display: flex;
+    flex-direction: column-reverse;
     background-color: #eaedee;
     height: 40vh;
     margin-left: 5vw;
     margin-bottom: 1em;
     padding: .5em;
     width: 90vw;
-    border-right: 0.1em solid hsla(255,100%,100%,0);
-    border-bottom: 0.1em solid hsla(255,100%,100%,0);
-    border-left: 0.1em solid hsla(255,100%,100%,0);
-    border-top: 0.1em solid hsla(255,100%,100%,0);
+    border-right: 0.1em solid hsla(255,100%,100%,1);
+    border-bottom: 0.1em solid hsla(255,100%,100%,1);
+    border-left: 0.1em solid hsla(255,100%,100%,1);
+    border-top: 0.1em solid hsla(255,100%,100%,1);
     transition: border-left 0.2s 0.3s,
                 border-top 0.2s 0.2s,
                 border-right 0.2s 0.1s,
                 border-bottom 0.2s;
     background-image: url(../images/verhalen.png);
     background-size: cover;
+    background-position: center;
 }
 
 main section + section {
@@ -338,6 +347,20 @@ section + section > div:nth-child(1) {
 
 }
 
+input:hover,
+section > h3 + div article:hover,
+section + section article:hover,
+header a img:hover {
+    border-right: 0.1em solid hsla(206,63%,73%,1);
+    border-bottom: 0.1em solid hsla(206,63%,73%,1);
+    border-left: 0.1em solid hsla(206,63%,73%,1);
+    border-top: 0.1em solid hsla(206,63%,73%,1);
+    transition: border-left 0.2s,
+                border-top 0.2s 0.1s,
+                border-right 0.2s 0.2s,
+                border-bottom 0.2s 0.3s;
+}
+
 /*
 =====================================
                NAV
@@ -346,7 +369,7 @@ section + section > div:nth-child(1) {
 
 nav > ul > li > a {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.3em;
+    font-size: 1em;
     text-transform: uppercase;
     color: #005184;
     text-decoration: none;
