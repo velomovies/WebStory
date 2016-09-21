@@ -1,8 +1,13 @@
 /*csslint empty-rules:false, ids:false, outline-none:false, order-alphabetical:false, fallback-colors: false, unique-headings: false, box-model: false, box-sizing: false, qualified-headings: false, gradients: false, star-property-hack: false, import: false, universal-selector: false, unqualified-attributes: false, overqualified-elements: false*/
 
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+==================================================
+                    CSS RESET
+
+    http://meyerweb.com/eric/tools/css/reset/
+                v2.0 | 20110126
+          License: none (public domain)
+===================================================
 */
 
 html, body, div, span, applet, object, iframe,
@@ -53,7 +58,11 @@ table {
     box-sizing: border-box;
 }
 
-/* FONT */
+/*
+=====================================
+                FONT
+=====================================
+*/
 
 @font-face {
     font-family: 'DFDS-bold';
@@ -70,25 +79,14 @@ table {
     font-style: normal;
 }
 
-/* ALGEMEEN */
+/*
+=====================================
+             ALGEMEEN
+=====================================
+*/
 
 body {
     background-color: #eaedee;
-}
-
-header {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-}
-
-header nav {
-    display: flex;
-}
-
-header div {
-    display: flex;
-    margin: 1vh 1vw 1vh 1vw;
 }
 
 h1 {
@@ -107,6 +105,27 @@ h1 span {
     text-transform: none;
 }
 
+/*
+=====================================
+              HEADER
+=====================================
+*/
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+}
+
+header div {
+    display: flex;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
 header div img {
     height: 5vh;
     margin-left: 5vw;
@@ -122,6 +141,12 @@ header a img {
                 border-right 0.2s 0.1s,
                 border-bottom 0.2s;
 }
+
+/*
+=====================================
+              SEARCH
+=====================================
+*/
 
 input[type="image"] {
     height: 4vh;
@@ -154,12 +179,12 @@ header a img:hover {
                 border-bottom 0.2s 0.3s;
 }
 
-label[for="search"] + input {
-    display: none;
-}
-
 label[for="search"] + input + input:hover {
     display: flex;
+}
+
+label[for="search"] + input {
+    display: none;
 }
 
 label[for="aantal"],
@@ -167,17 +192,21 @@ label[for="search"] {
     display: none;
 }
 
-/* INDEX.HTML */
+/*
+=====================================
+             MAIN
+=====================================
+*/
 
 header + section {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.8em;
+    font-size: 1.9em;
     text-transform: uppercase;
     color: #003251;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 2vh 0;
+    margin: 3vh 0;
 }
 
 section form input {
@@ -197,25 +226,44 @@ section h2 {
 
 section h3 {
     font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1em;
+    font-size: 1.1em;
+    color: #003251;
+    margin: 1em 0 -.5em 2vw;
+}
+
+section div h3 {
+    margin-left: 4vw;
+}
+
+section h4 {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    color: #003251;
+}
+
+section p,
+footer img + time {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     color: #003251;
 }
 
 main section div {
     display: flex;
-
 }
 
-main section + section div {
-    flex-wrap: wrap;
+section > h3 + div {
+    width: 100%;
+    overflow: auto;
+    overflow-y: hidden;
 }
 
-section article {
+section > h3 + div article {
     background-color: white;
-    margin: 1em;
+    margin: 1em .5em 1em .5em;
     padding: .5em;
-    width: 20em;
-    height: 15em;
+    width: 85vw;
+    height: 40vh;
     border-right: 0.1em solid hsla(255,100%,100%,0);
     border-bottom: 0.1em solid hsla(255,100%,100%,0);
     border-left: 0.1em solid hsla(255,100%,100%,0);
@@ -224,6 +272,60 @@ section article {
                 border-top 0.2s 0.2s,
                 border-right 0.2s 0.1s,
                 border-bottom 0.2s;
+    background-image: url(../images/voorkeuren.png);
+    background-size: cover;
+}
+
+section div a {
+    text-decoration: none;
+}
+
+div footer {
+    display: flex;
+    flex-direction: column;
+}
+
+div footer div {
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+footer div img {
+    height: .9em;
+    margin: .3em;
+}
+
+footer div p,
+footer img + time {
+    font-size: 1em;
+}
+
+main section + section div {
+    flex-wrap: wrap;
+}
+
+main section + section div:nth-child(1)  {
+    align-items: baseline;
+    margin-bottom: .5em;
+}
+
+section + section article {
+    background-color: #eaedee;
+    height: 40vh;
+    margin-left: 5vw;
+    margin-bottom: 1em;
+    padding: .5em;
+    width: 90vw;
+    border-right: 0.1em solid hsla(255,100%,100%,0);
+    border-bottom: 0.1em solid hsla(255,100%,100%,0);
+    border-left: 0.1em solid hsla(255,100%,100%,0);
+    border-top: 0.1em solid hsla(255,100%,100%,0);
+    transition: border-left 0.2s 0.3s,
+                border-top 0.2s 0.2s,
+                border-right 0.2s 0.1s,
+                border-bottom 0.2s;
+    background-image: url(../images/verhalen.png);
+    background-size: cover;
 }
 
 main section + section {
@@ -236,12 +338,30 @@ section + section > div:nth-child(1) {
 
 }
 
-main section + section article {
-    background-color: #eaedee;
-    height: 20em;
+/*
+=====================================
+               NAV
+=====================================
+*/
+
+nav > ul > li > a {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: #005184;
+    text-decoration: none;
+    margin-right: 4vw;
 }
 
-/* VERHAAL.HTML */
+nav ul li ul {
+    display: none;
+}
+
+/*
+=====================================
+             VERHAAL.HTML
+=====================================
+*/
 
 header + main {
     width: 40vw;
@@ -299,5 +419,3 @@ time::selection,
 span::selection {
     color: #003251;
 }
-
-
