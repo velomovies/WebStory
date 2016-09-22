@@ -194,7 +194,7 @@ header + aside {
     display: flex;
     align-items: flex-end;
     margin: 1em 1em 0 1em;
-    max-width: 20em;
+    max-width: 90vw;
     height: 20em;
 }
 
@@ -202,7 +202,7 @@ header + aside div {
     display: flex;
     flex-direction: column;
     background-color: #022c44;
-    width: 20em;
+    width: 90vw;
 }
 
 header + aside div p {
@@ -211,6 +211,7 @@ header + aside div p {
     font-size: 1.3em;
     color: white;
     align-self: center;
+    padding: .2em;
     margin: 1em 0 0 0;
 }
 
@@ -234,19 +235,21 @@ header + aside input {
 
 header + aside + form {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: space-between;
     background-color: white;
-    margin: 0 1em;
+    margin: 0 1em 1em 1em;
     padding: 1em;
     box-shadow: .1em .1em .3em gray;
-    max-width: 20em;
-    height: 32em;
+    max-width: 90vw;
+    height: 35em;
 }
 
 form > fieldset {
     display: flex;
     flex-direction: column;
+    margin-left: 3vw;
 }
 
 form > fieldset legend {
@@ -266,6 +269,8 @@ form > fieldset label {
 }
 
 form > fieldset input {
+    width: 50vw;
+    min-width: 15em;
     border: 0.1em solid #eaedee;
     border-radius: .3em;
     padding: .3em;
@@ -278,8 +283,6 @@ form > fieldset + fieldset span {
     text-align: center;
     padding: 1em;
     margin: .1em;
-    border: .1em solid gray;
-    border: 0.1em solid #eaedee;
     border-radius: .3em;
     cursor: pointer;
     border-right: 0.1em solid #eaedee;
@@ -293,13 +296,15 @@ form > fieldset + fieldset span {
 }
 
 form > fieldset + fieldset div {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
 form > fieldset + fieldset div + label input {
     margin: .5em .3em 1em .3em;
-    width: 5em;
+    width: 5vw;
+    min-width: 5em;
 }
 
 form > fieldset + fieldset div + label {
@@ -319,13 +324,13 @@ input[type="checkbox"] {
 form fieldset + label + input {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1em;
+/*    align-self: flex-end;*/
     text-transform: uppercase;
     color: white;
     background-color: #f6861f;
     height: 2em;
-    padding: .2em;
+    padding: 0 1em;
     border: 0.1em solid hsla(255, 100%, 100%, 1);
-    margin-left: 10rem;
 }
 
 /*
@@ -544,7 +549,7 @@ nav ul li ul {
 =====================================
 */
 
-@media (min-width: 620px){
+@media (min-width: 620px) {
     section > h3 + div article {
         width: 60vw;
     }
@@ -553,35 +558,34 @@ nav ul li ul {
         margin-left: 1vw;
     }
     section footer + div p {
-    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1em;
-    color: #003251;
-    display: flex;
-}
+        font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1em;
+        color: #003251;
+        display: flex;
+    }
     section h3 + div p {
         color: #eaedee;
     }
-
 }
 
 @media (min-width: 1080px) {
-     section > h3 + div article {
+    section > h3 + div article {
         width: 30vw;
     }
     section + section article {
         width: 31vw;
     }
     section > h3 + div article footer + div {
-    width: 20rem;
+        width: 20rem;
     }
     main section + section footer + div {
-    flex-direction: column;
-    width: 20rem;
+        flex-direction: column;
+        width: 20rem;
     }
 }
 
 @media (min-width: 1260px) {
-     section > h3 + div article {
+    section > h3 + div article {
         width: 25rem;
     }
     section + section article {
