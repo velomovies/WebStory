@@ -175,8 +175,157 @@ label[for="search"] + input {
 }
 
 label[for="aantal"],
-label[for="search"] {
+label[for="search"],
+label[for="aanmelden"],
+label[for="inlog"] {
     display: none;
+}
+
+/*
+=====================================
+             ASIDE
+=====================================
+*/
+
+header + aside {
+    background-image: url(../images/boekenkast.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    margin: 1em 1em 0 1em;
+    max-width: 20em;
+    height: 20em;
+}
+
+header + aside div {
+    display: flex;
+    flex-direction: column;
+    background-color: #022c44;
+    width: 20em;
+}
+
+header + aside div p {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: white;
+    align-self: center;
+    margin: 1em 0 0 0;
+}
+
+header + aside input {
+    align-self: center;
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1em;
+    padding: .5em 1em;
+    margin: 1em;
+    text-transform: uppercase;
+    color: #005184;
+    background-color: white;
+    cursor: pointer;
+}
+
+/*
+=====================================
+             FORM
+=====================================
+*/
+
+header + aside + form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0 1em;
+    padding: 1em;
+    box-shadow: .1em .1em .3em gray;
+    max-width: 20em;
+    height: 32em;
+}
+
+form > fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+form > fieldset legend {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    color: #005184;
+    margin-bottom: .5em;
+}
+
+form > fieldset label {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family:"DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: .8em;
+    color: #6d6f71;
+}
+
+form > fieldset input {
+    border: 0.1em solid #eaedee;
+    border-radius: .3em;
+    padding: .3em;
+    margin-bottom: 1em;
+}
+
+form > fieldset + fieldset span {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em;
+    margin: .1em;
+    border: .1em solid gray;
+    border: 0.1em solid #eaedee;
+    border-radius: .3em;
+    cursor: pointer;
+    border-right: 0.1em solid #eaedee;
+    border-bottom: 0.1em solid #eaedee;
+    border-left: 0.1em solid #eaedee;
+    border-top: 0.1em solid #eaedee;
+    transition: border-left 0.2s 0.3s,
+                border-top 0.2s 0.2s,
+                border-right 0.2s 0.1s,
+                border-bottom 0.2s;
+}
+
+form > fieldset + fieldset div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form > fieldset + fieldset div + label input {
+    margin: .5em .3em 1em .3em;
+    width: 5em;
+}
+
+form > fieldset + fieldset div + label {
+    flex-direction: row;
+    align-items: baseline;
+}
+
+input[type="checkbox"]:checked + span {
+    background-color: #85bce9;
+    color: white;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+form fieldset + label + input {
+    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: white;
+    background-color: #f6861f;
+    height: 2em;
+    padding: .2em;
+    border: 0.1em solid hsla(255, 100%, 100%, 1);
+    margin-left: 10rem;
 }
 
 /*
@@ -225,21 +374,26 @@ section div h3 {
 
 section h4 {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.1em;
     margin: .3em 0;
     text-transform: uppercase;
     color: #003251;
 }
 
-section p,
-footer img + time {
-    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1em;
-    color: #003251;
+section footer + div p {
+    display: none;
+}
+
+section h3 + div h4,
+section h3 + div p {
+    color: #eaedee;
 }
 
 section footer div p,
 footer img + time {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    color: #003251;
     color: #eaedee;
 }
 
@@ -256,6 +410,7 @@ section > h3 + div {
 section > h3 + div article {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: space-between;
     background-color: white;
     padding: 0 1em 1em;
     background-image: url(../images/voorkeuren.png);
@@ -280,6 +435,7 @@ section div a {
 
 section > h3 + div article footer + div {
     flex-direction: column;
+    width: 30vw;
 }
 
 div footer {
@@ -307,7 +463,7 @@ main section + section div {
 }
 
 main section + section footer + div {
-    flex-direction: column;
+    width: 40vw;
 }
 
 main section + section div:nth-child(1)  {
@@ -318,6 +474,7 @@ main section + section div:nth-child(1)  {
 section + section article {
     display: flex;
     flex-direction: column-reverse;
+    justify-content: space-between;
     background-color: #eaedee;
     height: 40vh;
     margin-left: 5vw;
@@ -350,7 +507,8 @@ section + section > div:nth-child(1) {
 input:hover,
 section > h3 + div article:hover,
 section + section article:hover,
-header a img:hover {
+header a img:hover,
+form > fieldset + fieldset span:hover {
     border-right: 0.1em solid hsla(206,63%,73%,1);
     border-bottom: 0.1em solid hsla(206,63%,73%,1);
     border-left: 0.1em solid hsla(206,63%,73%,1);
@@ -379,6 +537,62 @@ nav > ul > li > a {
 nav ul li ul {
     display: none;
 }
+
+/*
+=====================================
+            MEDIA QUERIES
+=====================================
+*/
+
+@media (min-width: 620px){
+    section > h3 + div article {
+        width: 60vw;
+    }
+    section + section article {
+        width: 47vw;
+        margin-left: 1vw;
+    }
+    section footer + div p {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    color: #003251;
+    display: flex;
+}
+    section h3 + div p {
+        color: #eaedee;
+    }
+
+}
+
+@media (min-width: 1080px) {
+     section > h3 + div article {
+        width: 30vw;
+    }
+    section + section article {
+        width: 31vw;
+    }
+    section > h3 + div article footer + div {
+    width: 20rem;
+    }
+    main section + section footer + div {
+    flex-direction: column;
+    width: 20rem;
+    }
+}
+
+@media (min-width: 1260px) {
+     section > h3 + div article {
+        width: 25rem;
+    }
+    section + section article {
+        width: 23vw;
+    }
+    section > h3 + div {
+        justify-content: center;
+        background-color: #eaedee;
+    }
+}
+
 
 /*
 =====================================

@@ -3,16 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aanmelden</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <!-- HEADER (LOGO + NAV) -->
     <header>
         <div>
             <img src="images/logo.png" alt="logo DFDS">
             <h1>DFDS <span>Verhalen</span></h1>
         </div>
+
         <nav>
             <form action="#">
                 <label for="search">Zoeken</label>
@@ -22,27 +26,37 @@
             <a href="Account"><img src="images/account.svg" alt="Persoon"></a>
         </nav>
     </header>
+
+    <!-- INLOGGEN -->
+    <aside>
+               <label for="inlog">Inloggen</label><div><p>heeft u al een account?</p><input id="inlog" type="submit" value="Inloggen"></div>
+    </aside>
+
+    <!-- AANMELD FORMULIER -->
     <form action="#">
         <fieldset>
-            <legend>Persoonlijke details</legend>
-            <label>Voornaam: <input type="text" required placeholder="Jan"></label>
-            <label>Tussenvoegsel: <input type="text" placeholder="de"></label>
-            <label>Achternaam: <input type="text" required placeholder="Vries"></label>
+            <legend>Wie bent u?</legend>
+            <label>Voornaam: <input type="text" required></label>
+            <label>Achternaam: <input type="text" required></label>
             <label>Emailadres: <input type="email" required placeholder="mail@example.com"></label>
-            <label>telefoonnummer: <input type="tel" placeholder="0612345678"></label>
-        </fieldset>
-        <fieldset>
-            <legend>Adres</legend>
-            <label>Straatnaam en Huisnummer: <input type="text" placeholder="Straatweg 12"></label>
-            <label>Postcode: <input type="text" placeholder="1234AB" pattern="[1-9][0-9]{3}\s?[a-zA-Z]{2}"></label>
-        </fieldset>
-        <fieldset>
-            <legend>Account</legend>
             <label>Gebruikersnaam: <input type="text" required></label>
             <label>Wachtwoord: <input type="password" required></label>
         </fieldset>
-        <input type="submit" value="Aanmelden">
+        <fieldset>
+            <legend>Wat voor verhalen wilt u lezen?</legend>
+            <div>
+                <label><input type="checkbox" value="genre"><span>Spannend</span></label>
+                <label><input type="checkbox" value="genre"><span>Humor</span></label>
+                <label><input type="checkbox" value="genre"><span>Liefde</span></label>
+                <label><input type="checkbox" value="genre"><span>Fictie</span></label>
+                <label><input type="checkbox" value="genre"><span>Non - Fictie</span></label>
+                <label><input type="checkbox" value="genre"><span>Politiek</span></label>
+            </div>
+            <label><input type="number" placeholder="10">minuten</label>
+        </fieldset>
+        <label for="aanmelden">Aanmelden</label><input id="aanmelden" type="submit" value="Aanmelden">
     </form>
+
 </body>
 
 </html>
