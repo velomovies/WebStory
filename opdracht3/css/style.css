@@ -187,7 +187,7 @@ label[for="inlog"] {
 =====================================
 */
 
-header + aside {
+header + div aside {
     background-image: url(../images/boekenkast.jpg);
     background-size: cover;
     background-position: center;
@@ -198,14 +198,14 @@ header + aside {
     height: 20em;
 }
 
-header + aside div {
+header + div aside div {
     display: flex;
     flex-direction: column;
     background-color: #022c44;
     width: 90vw;
 }
 
-header + aside div p {
+header + div aside div p {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
     font-size: 1.3em;
@@ -215,7 +215,7 @@ header + aside div p {
     margin: 1em 0 0 0;
 }
 
-header + aside input {
+header + div aside input {
     align-self: center;
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.1em;
@@ -233,7 +233,7 @@ header + aside input {
 =====================================
 */
 
-header + aside + form {
+header + div aside + form {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
@@ -303,8 +303,9 @@ form > fieldset + fieldset div {
 
 form > fieldset + fieldset div + label input {
     margin: .5em .3em 1em .3em;
-    width: 5vw;
+    width: 5em;
     min-width: 5em;
+    max-width: 5em;
 }
 
 form > fieldset + fieldset div + label {
@@ -324,7 +325,7 @@ input[type="checkbox"] {
 form fieldset + label + input {
     font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1em;
-/*    align-self: flex-end;*/
+    align-self: flex-end;
     text-transform: uppercase;
     color: white;
     background-color: #f6861f;
@@ -568,6 +569,47 @@ nav ul li ul {
     }
 }
 
+@media (min-width: 820px) {
+    header + div {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+        background-image: url(../images/boekenkast_schuin.png);
+        background-size: cover;
+        background-position: center;
+        margin: 3vh 5vw;
+        height: 42em;
+    }
+    header + div aside {
+        background: none;
+        margin: 0;
+        max-height: 0;
+    }
+    header + div aside div {
+        background: none;
+    /*  padding: 3em;*/
+    }
+    header + div aside div p {
+        align-self: flex-end;
+        font-size: 2em;
+    }
+    header + div aside input {
+        align-self: flex-end;
+        font-size: 1em;
+    }
+    header + div aside + form {
+        margin: 0 0 9em 1em;
+        max-width: 24em;
+        height: 32em;
+    }
+    form > fieldset{
+        margin-left: 1em;
+    }
+    form > fieldset input {
+        max-width: 20em;
+    }
+}
+
 @media (min-width: 1080px) {
     section > h3 + div article {
         width: 30vw;
@@ -582,6 +624,12 @@ nav ul li ul {
         flex-direction: column;
         width: 20rem;
     }
+    header + div aside + form {
+        margin: 5em;
+    }
+    header + div aside div {
+        padding: 4em;
+    }
 }
 
 @media (min-width: 1260px) {
@@ -594,6 +642,10 @@ nav ul li ul {
     section > h3 + div {
         justify-content: center;
         background-color: #eaedee;
+    }
+    header + div {
+        max-width: 80em;
+        margin: 1em auto;
     }
 }
 
