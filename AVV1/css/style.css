@@ -79,6 +79,7 @@ table {
     font-style: normal;
 }
 
+
 /*
 =====================================
              ALGEMEEN
@@ -90,7 +91,7 @@ body {
 }
 
 h1 {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 4vh;
     margin-top: 1.1vh;
     margin-left: -.5vh;
@@ -99,11 +100,12 @@ h1 {
 }
 
 h1 span {
-    font-family:"DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     color: #8fbfe6;
     margin-left: -.5vh;
     text-transform: none;
 }
+
 
 /*
 =====================================
@@ -141,11 +143,9 @@ header a img {
     margin: 2vh 2vw 1vh 1vw;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
-    transition: border-left 0.2s 0.3s,
-                border-top 0.2s 0.2s,
-                border-right 0.2s 0.1s,
-                border-bottom 0.2s;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
 }
+
 
 /*
 =====================================
@@ -165,14 +165,11 @@ input[type="image"] {
 }
 
 input {
-    border-right: 0.1em solid hsla(201,94%,13%,1);
-    border-bottom: 0.1em solid hsla(201,94%,13%,1);
-    border-left: 0.1em solid hsla(201,94%,13%,1);
-    border-top: 0.1em solid hsla(201,94%,13%,1);
-    transition: border-left 0.2s 0.3s,
-                border-top 0.2s 0.2s,
-                border-right 0.2s 0.1s,
-                border-bottom 0.2s;
+    border-right: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-bottom: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-left: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-top: 0.1em solid hsla(201, 94%, 13%, 1);
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
 }
 
 label[for="search"] + input {
@@ -189,6 +186,7 @@ label[for="aanmelden"],
 label[for="inlog"] {
     display: none;
 }
+
 
 /*
 =====================================
@@ -215,7 +213,7 @@ header + div aside div {
 }
 
 header + div aside div p {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
     font-size: 1.3em;
     color: white;
@@ -226,7 +224,7 @@ header + div aside div p {
 
 header + div aside input {
     align-self: center;
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.1em;
     padding: .5em 1em;
     margin: 1em;
@@ -235,6 +233,7 @@ header + div aside input {
     background-color: white;
     cursor: pointer;
 }
+
 
 /*
 =====================================
@@ -262,7 +261,7 @@ form > fieldset {
 }
 
 form > fieldset legend {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     text-transform: uppercase;
     color: #005184;
     margin-bottom: .5em;
@@ -272,7 +271,7 @@ form > fieldset label {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    font-family:"DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: .8em;
     color: #6d6f71;
 }
@@ -298,10 +297,7 @@ form > fieldset + fieldset span {
     border-bottom: 0.1em solid #eaedee;
     border-left: 0.1em solid #eaedee;
     border-top: 0.1em solid #eaedee;
-    transition: border-left 0.2s 0.3s,
-                border-top 0.2s 0.2s,
-                border-right 0.2s 0.1s,
-                border-bottom 0.2s;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
 }
 
 form > fieldset + fieldset div {
@@ -332,7 +328,7 @@ input[type="checkbox"] {
 }
 
 form fieldset + label + input {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1em;
     align-self: flex-end;
     text-transform: uppercase;
@@ -343,6 +339,7 @@ form fieldset + label + input {
     border: 0.1em solid hsla(255, 100%, 100%, 1);
 }
 
+
 /*
 =====================================
              MAIN
@@ -350,7 +347,7 @@ form fieldset + label + input {
 */
 
 header + section {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.9em;
     text-transform: uppercase;
     color: #003251;
@@ -388,7 +385,7 @@ section div h3 {
 }
 
 section h4 {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.1em;
     margin: .3em 0;
     text-transform: uppercase;
@@ -437,10 +434,7 @@ section > h3 + div article {
     border-bottom: 0.1em solid #eaedee;
     border-left: 0.1em solid #eaedee;
     border-top: 0.1em solid #eaedee;
-    transition: border-left 0.2s 0.3s,
-                border-top 0.2s 0.2s,
-                border-right 0.2s 0.1s,
-                border-bottom 0.2s;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
     margin: 1em .5em 1em .5em;
     width: 85vw;
     height: 45vh;
@@ -487,7 +481,7 @@ main section + section footer + div {
     width: 20vw;
 }
 
-main section + section div:nth-child(1)  {
+main section + section div:nth-child(1) {
     align-items: baseline;
     margin: .5em .2em .2em .2em;
 }
@@ -502,14 +496,11 @@ section + section article {
     margin-bottom: 1em;
     padding: .5em;
     width: 90vw;
-    border-right: 0.1em solid hsla(255,100%,100%,1);
-    border-bottom: 0.1em solid hsla(255,100%,100%,1);
-    border-left: 0.1em solid hsla(255,100%,100%,1);
-    border-top: 0.1em solid hsla(255,100%,100%,1);
-    transition: border-left 0.2s 0.3s,
-                border-top 0.2s 0.2s,
-                border-right 0.2s 0.1s,
-                border-bottom 0.2s;
+    border-right: 0.1em solid hsla(255, 100%, 100%, 1);
+    border-bottom: 0.1em solid hsla(255, 100%, 100%, 1);
+    border-left: 0.1em solid hsla(255, 100%, 100%, 1);
+    border-top: 0.1em solid hsla(255, 100%, 100%, 1);
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
     background-image: url(../images/verhalen.png);
     background-size: cover;
     background-position: center;
@@ -522,7 +513,6 @@ main section + section {
 section + section > div:nth-child(1) {
     display: flex;
     justify-content: space-between;
-
 }
 
 input:hover,
@@ -531,15 +521,13 @@ section + section article:hover,
 header a img:hover,
 form > fieldset + fieldset span:hover,
 header nav form input:hover {
-    border-right: 0.1em solid hsla(206,63%,73%,1);
-    border-bottom: 0.1em solid hsla(206,63%,73%,1);
-    border-left: 0.1em solid hsla(206,63%,73%,1);
-    border-top: 0.1em solid hsla(206,63%,73%,1);
-    transition: border-left 0.2s,
-                border-top 0.2s 0.1s,
-                border-right 0.2s 0.2s,
-                border-bottom 0.2s 0.3s;
+    border-right: 0.1em solid hsla(206, 63%, 73%, 1);
+    border-bottom: 0.1em solid hsla(206, 63%, 73%, 1);
+    border-left: 0.1em solid hsla(206, 63%, 73%, 1);
+    border-top: 0.1em solid hsla(206, 63%, 73%, 1);
+    transition: border-left 0.2s, border-top 0.2s 0.1s, border-right 0.2s 0.2s, border-bottom 0.2s 0.3s;
 }
+
 
 /*
 =====================================
@@ -563,7 +551,6 @@ nav ul ul {
     margin-top: .1em;
     background: #edf4fb;
     box-shadow: .2em .2em .5em gray;
-
 }
 
 nav ul ul li {
@@ -592,8 +579,9 @@ nav ul ul li:hover {
 }
 
 nav ul li:hover > ul {
-        display: block;
+    display: block;
 }
+
 
 /*
 =====================================
@@ -610,7 +598,7 @@ nav ul li:hover > ul {
         padding-bottom: .5em;
     }
     section div h3 {
-    margin-left: 1vw;
+        margin-left: 1vw;
     }
     section > h3 + div article {
         width: 60vw;
@@ -662,7 +650,7 @@ nav ul li:hover > ul {
         max-width: 24em;
         height: 32em;
     }
-    form > fieldset{
+    form > fieldset {
         margin-left: 1em;
     }
     form > fieldset input {
@@ -739,6 +727,7 @@ nav ul li:hover > ul {
         background-color: #eaedee;
     }
 }
+
 @media (min-width: 110em) {
     section + section article {
         width: 28rem;
@@ -746,9 +735,9 @@ nav ul li:hover > ul {
     main section + section footer + div {
         width: 15em;
     }
-    section + section {
-    }
+    section + section {}
 }
+
 
 /*
 =====================================
@@ -762,7 +751,7 @@ header + main {
 }
 
 main > article h2 {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.999em;
     text-align: center;
     text-transform: uppercase;
@@ -777,7 +766,7 @@ main > article p {
 }
 
 main > article footer p {
-    font-family:"DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     font-size: 1.141em;
     line-height: 1.712em;
     padding: 0.571em 0;
@@ -794,7 +783,7 @@ footer + p::first-letter {
 }
 
 footer a {
-    font-family:"DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     color: #005184;
