@@ -455,6 +455,7 @@ section > h3 + div article footer + div {
     align-self: flex-end;
     width: 30vw;
     margin-bottom: .5em;
+    margin-right: 1em;
 }
 
 div footer {
