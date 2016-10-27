@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aanmelden</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- HEADER (LOGO + NAV) -->
+    <header>
+        <div>
+            <img src="images/logo.png" alt="logo DFDS">
+            <h1>DFDS <span>Aanmelden</span></h1>
+        </div>
+
+        <nav>
+            <form action="#">
+                <label for="search">Zoeken</label>
+                <input id="search" type="search" required placeholder="Zoeken">
+                <input type="image" src="images/search.svg" alt="Submit">
+            </form>
+            <a href="index.html"><img src="images/account.svg" alt="Persoon"></a>
+        </nav>
+    </header>
+
+    <div>
+        <!-- INLOGGEN -->
+        <aside>
+                   <form action="aanmelden.html">
+                       <label for="inlog">Aanmelden</label><div><p>heeft u nog geen account?</p><input id="inlog" type="submit" value="Aanmelden"></div>
+                   </form>
+        </aside>
+
+        <!-- AANMELD FORMULIER -->
+        <form action="#">
+            <fieldset>
+                <legend>Vul hier uw gegevens in!</legend>
+                <label>Gebruikersnaam: <input type="text" required></label>
+                <label>Wachtwoord: <input type="password" required></label>
+            </fieldset>
+            <label for="aanmelden">Aanmelden</label><input id="aanmelden" type="submit" value="Login">
+        </form>
+    </div>
+
+</body>
+
+</html>

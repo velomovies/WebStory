@@ -1,0 +1,862 @@
+/*csslint empty-rules:false, ids:false, outline-none:false, order-alphabetical:false, fallback-colors: false, unique-headings: false, box-model: false, box-sizing: false, qualified-headings: false, gradients: false, star-property-hack: false, import: false, universal-selector: false, unqualified-attributes: false, overqualified-elements: false*/
+
+/*
+==================================================
+                    CSS RESET
+
+    http://meyerweb.com/eric/tools/css/reset/
+                v2.0 | 20110126
+          License: none (public domain)
+===================================================
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+=====================================
+                FONT
+=====================================
+*/
+
+@font-face {
+    font-family: 'DFDS-bold';
+    src: url("../font/dfds-bold.eot");
+    src: url("../font/dfds-bold.eot?#iefix") format("embedded-opentype"), url("../font/dfds-bold.woff") format("woff"), url("../font/dfds-bold.ttf") format("truetype"), url("../font/dfds-bold.svg#dfds-bold") format("svg");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DFDS-light';
+    src: url("../font/dfds-light.eot");
+    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/dfds-light.woff") format("woff"), url("../font/dfds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/*
+=====================================
+             ALGEMEEN
+=====================================
+*/
+
+body {
+    background-color: #eaedee;
+}
+
+h1 {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 4vh;
+    margin-top: 1.1vh;
+    margin-left: -.5vh;
+    text-transform: uppercase;
+    color: #003251;
+}
+
+h1 span {
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    color: #8fbfe6;
+    margin-left: -.5vh;
+    text-transform: none;
+}
+
+input:hover,
+section > h3 + div article:hover,
+section + section article:hover,
+header a img:hover,
+form > fieldset + fieldset span:hover,
+header nav form input:hover {
+    border-right: 0.1em solid hsla(206, 63%, 73%, 1);
+    border-bottom: 0.1em solid hsla(206, 63%, 73%, 1);
+    border-left: 0.1em solid hsla(206, 63%, 73%, 1);
+    border-top: 0.1em solid hsla(206, 63%, 73%, 1);
+    transition: border-left 0.2s, border-top 0.2s 0.1s, border-right 0.2s 0.2s, border-bottom 0.2s 0.3s;
+}
+
+
+/*
+=====================================
+              HEADER
+=====================================
+*/
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+}
+
+header div {
+    display: flex;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+header div img {
+    height: 6vh;
+    margin-left: 5vw;
+    transition: .4s;
+}
+
+header div img:hover {
+    transform: scale(1.1);
+}
+
+header a img {
+    height: 5vh;
+    margin: 2vh 2vw 1vh 1vw;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+}
+
+
+/*
+=====================================
+              SEARCH
+=====================================
+*/
+
+header nav form {
+    align-items: baseline;
+}
+
+input[type="image"] {
+    height: 5vh;
+    margin: 2vh 0 1vh 0;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+}
+
+input {
+    border-right: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-bottom: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-left: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-top: 0.1em solid hsla(201, 94%, 13%, 1);
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+}
+
+label[for="search"] + input {
+    display: none;
+    height: 5vh;
+    padding: 1vh;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+}
+
+label[for="aantal"],
+label[for="search"],
+label[for="aanmelden"],
+label[for="inlog"] {
+    display: none;
+}
+
+
+/*
+=====================================
+             ASIDE
+=====================================
+*/
+
+header + div aside {
+    background-image: url(../images/boekenkast.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    margin: 1em 1em 0 1em;
+    max-width: 90vw;
+    height: 20em;
+}
+
+header + div aside div {
+    display: flex;
+    flex-direction: column;
+    background-color: #022c44;
+    width: 90vw;
+}
+
+header + div aside div p {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    color: white;
+    align-self: center;
+    padding: .2em;
+    margin: 1em 0 0 0;
+}
+
+header + div aside input {
+    align-self: center;
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1em;
+    padding: .5em 1em;
+    margin: 1em;
+    text-transform: uppercase;
+    color: #005184;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+/*
+=====================================
+             FORM
+=====================================
+*/
+
+header + div aside + form {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    margin: 0 1em 1em 1em;
+    padding: 1em;
+    box-shadow: .1em .1em .3em gray;
+    max-width: 90vw;
+}
+
+form > fieldset {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3vw;
+}
+
+form > fieldset legend {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: #005184;
+    margin-bottom: .5em;
+}
+
+form > fieldset label {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    color: #6d6f71;
+}
+
+form > fieldset input {
+    width: 50vw;
+    min-width: 15em;
+    background: white;
+    border-radius: .3em;
+    padding: .3em;
+    margin-top: .1em;;
+    margin-bottom: 1em;
+    transition: all .3s;
+}
+
+form > fieldset input:focus:invalid {
+    background: lightpink;
+    transform: scale(1.05);
+}
+
+form > fieldset input:hover:invalid {
+    border: .1em solid red;
+    transition: all .3s;
+}
+
+form > fieldset input:hover {
+    border: .1em solid green;
+    transition: all .3s;
+}
+
+form > fieldset input:focus {
+    outline: none;
+    background: palegreen;
+    transition: all .3s;
+    transform: scale(1.05);
+}
+
+form > fieldset + fieldset p  {
+    opacity: 0;
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    color: #f6861f;
+    transform: translate(0,-3em);
+    transition: all .6s;
+    margin-bottom: 1em;
+}
+
+form > fieldset + fieldset:hover p {
+    opacity: 1;
+    transform: translate(0,0);
+    transition: all .6s;
+}
+
+form > fieldset + fieldset span {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1em;
+    margin: .1em;
+    border-radius: .3em;
+    cursor: pointer;
+    border-right: 0.1em solid #eaedee;
+    border-bottom: 0.1em solid #eaedee;
+    border-left: 0.1em solid #eaedee;
+    border-top: 0.1em solid #eaedee;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+}
+
+form > fieldset + fieldset div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form > fieldset + fieldset div + label input {
+    margin: .5em .3em 1em .3em;
+    width: 5em;
+    min-width: 5em;
+    max-width: 5em;
+}
+
+form > fieldset + fieldset div + label {
+    flex-direction: row;
+    align-items: baseline;
+}
+
+input[type="checkbox"]:checked + span {
+    background-color: #85bce9;
+    color: white;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+form fieldset + label + input {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    align-self: flex-end;
+    text-transform: uppercase;
+    color: white;
+    background-color: #f6861f;
+    height: 2em;
+    padding: 0 1em;
+    transition: all .2s;
+    cursor: pointer;
+    border: 0.1em solid hsla(255, 100%, 100%, 1);
+}
+
+form fieldset + label + input:hover {
+    box-shadow: inset 0 1em rgba(0,0,0,.1);
+    transition: all .2s;
+}
+
+form fieldset + label + input:focus {
+    box-shadow: inset 3.5em 0 rgba(0,0,0,.1);
+    transition: all .2s;
+}
+
+form fieldset + label + input:active {
+    transform: scale(0.9);
+    transition: all .2s;
+}
+
+/*
+=====================================
+             MAIN
+=====================================
+*/
+
+header + section {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.9em;
+    text-transform: uppercase;
+    color: #003251;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 3vh 0;
+}
+
+section form input {
+    width: 2.7em;
+    height: 1.8em;
+    background-color: #eaedee;
+    border-radius: .2em;
+}
+
+section form {
+    margin-top: -.21em;
+}
+
+section h2 {
+    margin: 0 .2em 0 .2em;
+}
+
+section h3 {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: .8em;
+    color: #003251;
+    margin: 1em 0 -.9em 2vw;
+}
+
+section div h3 {
+    margin-left: 5vw;
+    margin-top: 2em;
+}
+
+section h4 {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1em;
+    margin: .3em 0;
+    text-transform: uppercase;
+    color: #003251;
+}
+
+section footer + div p {
+    display: none;
+}
+
+section h3 + div h4,
+section h3 + div p {
+    color: #eaedee;
+    text-shadow: .1em .1em .3em black;
+}
+
+section footer div p,
+footer img + time {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    color: #003251;
+    color: #eaedee;
+    text-shadow: .1em .1em .5em darkgray;
+}
+
+main section div {
+    display: flex;
+}
+
+section > h3 + div {
+    width: 100%;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+section > h3 + div article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 1em 1em;
+    background-image: url(../images/voorkeuren.png);
+    background-size: cover;
+    background-position: center;
+    border-right: 0.1em solid #eaedee;
+    border-bottom: 0.1em solid #eaedee;
+    border-left: 0.1em solid #eaedee;
+    border-top: 0.1em solid #eaedee;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+    margin: 1em .5em 1em .5em;
+    width: 85vw;
+    height: 45vh;
+}
+
+section div a {
+    text-decoration: none;
+}
+
+section > h3 + div article footer + div {
+    flex-direction: column;
+    align-self: flex-end;
+    width: 30vw;
+    margin-bottom: .5em;
+    margin-right: .5em;
+}
+
+div footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5em;
+}
+
+div footer div {
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+footer div img {
+    height: .9em;
+    margin: .3em;
+}
+
+footer div p,
+footer img + time {
+    font-size: 1em;
+}
+
+main section + section div {
+    flex-wrap: wrap;
+}
+
+main section + section footer + div {
+    width: 20vw;
+}
+
+main section + section div:nth-child(1) {
+    align-items: baseline;
+    margin: .5em .2em .2em .2em;
+}
+
+section + section article {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    background-color: #eaedee;
+    height: 40vh;
+    margin-left: 5vw;
+    margin-bottom: 1em;
+    padding: .5em;
+    width: 90vw;
+    border-right: 0.1em solid hsla(255, 100%, 100%, 1);
+    border-bottom: 0.1em solid hsla(255, 100%, 100%, 1);
+    border-left: 0.1em solid hsla(255, 100%, 100%, 1);
+    border-top: 0.1em solid hsla(255, 100%, 100%, 1);
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+    background-image: url(../images/verhalen.png);
+    background-size: cover;
+    background-position: center;
+}
+
+main section + section {
+    background-color: white;
+}
+
+section + section > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+=====================================
+               NAV
+=====================================
+*/
+
+nav > ul > li > a {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #005184;
+    text-decoration: none;
+    margin-right: 3vw;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    margin-left: -3.5em;
+    margin-top: .1em;
+    background: #edf4fb;
+    box-shadow: .2em .2em .5em gray;
+}
+
+nav ul ul li {
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    padding: .2em 3em .2em .5em;
+    border-bottom: .1em solid;
+    line-height: 2;
+    cursor: pointer;
+}
+
+nav ul ul a:last-child {
+    border: 0;
+}
+
+nav ul ul a {
+    color: #005184;
+}
+
+nav ul ul li:hover a {
+    color: #edf4fb;
+    border-bottom: .1em solid;
+}
+
+nav ul ul li:hover {
+    background-color: #005184;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+
+/*
+=====================================
+            MEDIA QUERIES
+=====================================
+*/
+
+@media (min-width: 40em) {
+    section + main section h3 {
+        font-size: 1em;
+    }
+    section > h3 {
+        margin-left: 1vw;
+        padding-bottom: .5em;
+    }
+    section div h3 {
+        margin-left: 1vw;
+    }
+    section > h3 + div article {
+        width: 60vw;
+    }
+    section + section article {
+        width: 47vw;
+        margin-left: 1vw;
+    }
+    section footer + div p {
+        font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1em;
+        color: #003251;
+        display: inherit;
+    }
+    section h3 + div p {
+        color: #eaedee;
+    }
+}
+
+@media (min-width: 50em) {
+    header + div {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+        background-image: url(../images/boekenkast_schuin.png);
+        background-size: cover;
+        background-position: center;
+        margin: 3vh 5vw;
+        height: 42em;
+    }
+    header + div aside {
+        background: none;
+        margin: 0;
+        max-height: 0;
+    }
+    header + div aside div {
+        background: none;
+    }
+    header + div aside div p {
+        align-self: flex-end;
+        font-size: 2em;
+        padding: .1em;
+    }
+    header + div aside input {
+        align-self: flex-end;
+        font-size: 1em;
+        margin: .3em;
+    }
+    header + div aside + form {
+        max-width: 24em;
+        margin-bottom: 6em;
+        margin-left: 5em;
+    }
+    form > fieldset {
+        margin-left: 1em;
+    }
+    form > fieldset input {
+        max-width: 20em;
+    }
+}
+
+@media (min-width: 70em) {
+    label[for="search"] + input {
+        display: inherit;
+        margin: 2vh -.1em 0 0;
+        align-self: flex-start;
+    }
+    nav form {
+        display: flex;
+        flex-direction: row;
+    }
+    div nav {
+        align-items: center;
+    }
+    section > h3 {
+        margin-left: .7vw;
+    }
+    section > h3 + div article {
+        width: 40vw;
+    }
+    section + section article {
+        width: 31vw;
+    }
+    section > h3 + div article footer + div {
+        width: 20vw;
+    }
+    main section + section footer + div {
+        width: 18vw;
+    }
+     header + div aside + form {
+        margin-bottom: 5em;
+    }
+    header + div aside div {
+        padding: 4em;
+    }
+}
+
+@media (min-width: 80em) {
+    section > h3 {
+        width: calc(92rem);
+    }
+    section > h3 + div article {
+        width: 30rem;
+    }
+    section > h3 + div article footer + div {
+        width: 15rem;
+    }
+    section + section article {
+        width: 23vw;
+    }
+    main section + section footer + div {
+        width: 15vw;
+    }
+}
+
+@media (min-width: 95em) {
+    section > h3 {
+        margin: 0 auto -.5em auto;
+        padding: 0;
+    }
+    section > h3 + div,
+    section > h3 {
+        justify-content: center;
+        background-color: #eaedee;
+    }
+    header + div {
+        max-width: 80em;
+        margin: 1em auto;
+    }
+    header + div aside div {
+        max-width: 80em;
+        margin: auto;
+    }
+}
+
+@media (min-width: 110em) {
+    section + section article {
+        width: 28rem;
+    }
+    main section + section footer + div {
+        width: 15em;
+    }
+}
+
+
+/*
+=====================================
+             VERHAAL.HTML
+=====================================
+*/
+
+header + main {
+    width: 40vw;
+    margin-left: 30vw;
+}
+
+main > article h2 {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.999em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #003251;
+}
+
+main > article p {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.141em;
+    line-height: 1.712em;
+    margin-bottom: 1.141em;
+}
+
+main > article footer p {
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.141em;
+    line-height: 1.712em;
+    padding: 0.571em 0;
+    text-align: right;
+    color: #85bce9;
+    column-count: 1;
+}
+
+footer + p::first-letter {
+    float: left;
+    font-size: 3.7em;
+    line-height: 0.856em;
+    margin-right: 0.05em;
+}
+
+footer a {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #005184;
+}
+
+a:hover {
+    color: #003251;
+}
+
+*::selection {
+    background: #85bce9;
+}
+
+time::selection,
+span::selection {
+    color: #003251;
+}

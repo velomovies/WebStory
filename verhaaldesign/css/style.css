@@ -1,0 +1,225 @@
+/*csslint empty-rules:false, ids:false, outline-none:false, order-alphabetical:false, fallback-colors: false, unique-headings: false, box-model: false, box-sizing: false, qualified-headings: false, gradients: false, star-property-hack: false, import: false, universal-selector: false, unqualified-attributes: false, overqualified-elements: false*/
+
+/*
+==================================================
+                    CSS RESET
+
+    http://meyerweb.com/eric/tools/css/reset/
+                v2.0 | 20110126
+          License: none (public domain)
+===================================================
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*
+=====================================
+                FONT
+=====================================
+*/
+
+@font-face {
+    font-family: 'DFDS-bold';
+    src: url("../font/dfds-bold.eot");
+    src: url("../font/dfds-bold.eot?#iefix") format("embedded-opentype"), url("../font/dfds-bold.woff") format("woff"), url("../font/dfds-bold.ttf") format("truetype"), url("../font/dfds-bold.svg#dfds-bold") format("svg");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DFDS-light';
+    src: url("../font/dfds-light.eot");
+    src: url("../font/dfds-light.eot?#iefix") format("embedded-opentype"), url("../font/dfds-light.woff") format("woff"), url("../font/dfds-light.ttf") format("truetype"), url("../font/dfds-light.svg#dfds_lightregular") format("svg");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'charles';
+    src: url("../font/charles_s.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+/*
+=====================================
+             ALGEMEEN
+=====================================
+*/
+
+body {
+    background-color: #eaedee;
+}
+
+h1 {
+    font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 4vh;
+    margin-top: 1.1vh;
+    margin-left: -.5vh;
+    text-transform: uppercase;
+    color: #003251;
+}
+
+h1 span {
+    font-family: "DFDS-light", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    color: #8fbfe6;
+    margin-left: -.5vh;
+    text-transform: none;
+}
+
+h2 {
+    font-family: "charles", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    font-size: 9.943em;
+}
+
+/*
+=====================================
+              HEADER
+=====================================
+*/
+
+header {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav {
+    display: flex;
+}
+
+header div {
+    display: flex;
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+header div img {
+    height: 6vh;
+    margin-left: 5vw;
+    transition: .4s;
+}
+
+header div img:hover {
+    transform: scale(1.1);
+}
+
+header a img {
+    height: 5vh;
+    margin: 2vh 2vw 1vh 1vw;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+}
+
+/*
+=====================================
+              SEARCH
+=====================================
+*/
+
+header nav form {
+    align-items: baseline;
+}
+
+input[type="image"] {
+    height: 5vh;
+    margin: 2vh 0 1vh 0;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+}
+
+input {
+    border-right: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-bottom: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-left: 0.1em solid hsla(201, 94%, 13%, 1);
+    border-top: 0.1em solid hsla(201, 94%, 13%, 1);
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+}
+
+label[for="search"] + input {
+    display: none;
+    height: 5vh;
+    padding: 1vh;
+    border: 0.1em solid #999a9c;
+    border-radius: .3em;
+}
+
+label[for="search"] {
+    display: none;
+}
+
+/*
+=====================================
+              MAIN
+=====================================
+*/
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+main h2 {
+    align-self: center;
+}
+
+main div {
+    align-self: flex-end;
+    width: 46.971em;
+    margin: 2.618em 11.089em;
+}
+
+main div p {
+    font-family: serif;
+    font-size: 1.618em;
+    line-height: 1.764em;
+    margin-bottom: 1.618em;
+}
+
+
