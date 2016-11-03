@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Aanmelden</title>
+    <title>Inloggen</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -14,17 +14,24 @@
     <header>
         <div>
             <img src="images/logo.png" alt="logo DFDS">
-            <h1>DFDS <span>Aanmelden</span></h1>
+            <h1>DFDS <span>Inloggen</span></h1>
         </div>
 
         <nav>
-            <form action="#">
+            <form>
                 <label for="search">Zoeken</label>
-                <input id="search" type="search" required placeholder="Zoeken">
-                <input type="image" src="images/search.svg" alt="Submit">
+                <input id="search" type="search" placeholder="Zoeken">
+                <img src="images/search.svg" alt="Zoek Knop">
             </form>
-            <a href="index.html"><img src="images/account.svg" alt="Persoon"></a>
+            <a href="index.html"><img src="images/home.svg" alt="Persoon"></a>
         </nav>
+        <div class="results">
+            <ul>
+                <li><a href="hyperbool.html">Hyperbool</a></li>
+                <li><a href="kinderboek.html">Kinderboek</a></li>
+                <li><a href="klumperbeven.html">Klumperbeven</a></li>
+            </ul>
+        </div>
     </header>
 
     <div>
@@ -36,7 +43,7 @@
         </aside>
 
         <!-- AANMELD FORMULIER -->
-        <form action="#">
+        <form action="aanmelden.html">
             <fieldset>
                 <legend>Vul hier uw gegevens in!</legend>
                 <label>Gebruikersnaam: <input type="text" required></label>
@@ -45,6 +52,9 @@
             <label for="aanmelden">Aanmelden</label><input id="aanmelden" type="submit" value="Login">
         </form>
     </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
 
 </body>
 

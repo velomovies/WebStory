@@ -16,25 +16,35 @@
             <img src="images/logo.png" alt="logo DFDS">
             <h1>DFDS <span>Verhalen</span></h1>
         </div>
-
         <nav>
-            <form action="#">
+            <form>
                 <label for="search">Zoeken</label>
-                <input id="search" type="search" required placeholder="Zoeken">
-                <input type="image" src="images/search.svg" alt="Submit">
+                <input id="search" type="search" placeholder="Zoeken">
+                <img src="images/search.svg" alt="Zoek Knop">
             </form>
-            <a href="aanmelden.html"><img src="images/account.svg" alt="Persoon"></a>
+            <a href="inlog.html"><img src="images/account.svg" alt="Persoon"></a>
         </nav>
+        <div class="results">
+            <ul>
+                <li><a href="hyperbool.html">Hyperbool</a></li>
+                <li><a href="kinderboek.html">Kinderboek</a></li>
+                <li><a href="klumperbeven.html">Klumperbeven</a></li>
+            </ul>
+        </div>
     </header>
 
     <!-- FILTER -->
     <section>
-        <h2>Ik heb</h2>
-        <form>
-            <label for="aantal">Aantal minuten</label>
-            <input id="aantal" type="number" max="999" min="0">
-        </form>
-        <h2>Minuten</h2>
+        <div>
+            <div>
+                <h2>Ik heb</h2>
+                <form>
+                    <label for="aantal">Aantal minuten</label>
+                    <input id="aantal" type="number" max="999" min="0" placeholder="0">
+                </form>
+                <h2>Minuten</h2>
+            </div>
+        </div>
     </section>
 
     <!-- MAIN CONTENT -->
@@ -62,8 +72,8 @@
                             </div>
                         </footer>
                         <div>
-                            <h4>Klumperbeven</h4>
-                            <p>Ik bus de stap uit en been met gepaste zwind over het stationsplein. In mijn zoon ligt de kinderwagen te slapen. Het pijpt regenstelen ...</p>
+                            <h4>Hyperbool</h4>
+                            <p>Ik stap de bus uit. De mensen stonken weer eens een uur in de wind. Stelletje bunzingen. Ik ben met ...</p>
                         </div>
                     </article>
                 </a>
@@ -183,7 +193,7 @@
             </div>
 
             <!-- VERHALEN ONDER ELKAAR -->
-            <div>
+            <div class="verhalenSectieOne">
 
                 <a href="#verhaal">
                     <article>
@@ -365,6 +375,194 @@
                         <div>
                             <h4>Toeristische route</h4>
                             <p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J. Cuypers ...</p>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+
+            <div class="verhalenSectieTwo hidden">
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>Toeristische route</h4>
+                            <p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J. Cuypers ...</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>De Cock en het raadsel van het verdwenen boek</h4>
+                            <p>Stationsplein, 12.00 uur in de middag De Cock met C-O-C-K. stapte de bus uit. In de kruiwagen ...</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>De verwarde man</h4>
+                            <p>De politie heeft dinsdag 2 februari een verwarde man aangehouden. Hij was op dat moment in een babywinkel ...</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>Presentator die ten onrechte denkt aansluiting te hebben gevonden bij ‘de kids’</h4>
+                            <p>Yo kids! Vet cool dat je weer kijkt! Hoor mijn verhaal: Ik stapte ...</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>Broers</h4>
+                            <p>Ik stap dus op ut stationsplein in dieën groâte stad uut dieën bus, met mien zoân in zijne keierwoâguh. Mien zoân ...</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>Alwetende verteller</h4>
+                            <p>Kijk, daar gaat Max J. Molovich. Hij is net uit de bus gestapt en loopt nu achter een gifgroene kinderwagen waarin ...</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>Code</h4>
+                            <p>Kraak de code en win een romantisch etentje met de verwarde man. In kwellende situaties toveren apen pennenvruchten uit invloedrijke ...</p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#verhaal">
+                    <article>
+                        <footer>
+                            <div>
+                                <img src="images/account_black.svg" alt="Persoon">
+                                <p>109</p>
+                            </div>
+                            <div>
+                                <img src="images/clock.svg" alt="Klok">
+                                <p>10min.</p>
+                            </div>
+                            <div>
+                                <img src="images/note.svg" alt="Datum">
+                                <time datetime="2016-09-12">23-09-2016</time>
+                            </div>
+                        </footer>
+                        <div>
+                            <h4>Klumperbeven</h4>
+                            <p>Ik bus de stap uit en been met gepaste zwind over het stationsplein. In mijn zoon ligt de kinderwagen te slapen. Het pijpt regenstelen ...</p>
                         </div>
                     </article>
                 </a>

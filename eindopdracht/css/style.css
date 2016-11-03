@@ -1,4 +1,4 @@
-/*csslint empty-rules:false, ids:false, outline-none:false, order-alphabetical:false, fallback-colors: false, unique-headings: false, box-model: false, box-sizing: false, qualified-headings: false, gradients: false, star-property-hack: false, import: false, universal-selector: false, unqualified-attributes: false, overqualified-elements: false*/
+/*csslint empty-rules:false, ids:false, outline-none:false, order-alphabetical:false, fallback-colors: false, unique-headings: false, box-model: false, box-sizing: false, qualified-headings: false, gradients: false, star-property-hack: false, import: false, universal-selector: false, unqualified-attributes: false, overqualified-elements: false, important: false*/
 
 /*
 ==================================================
@@ -117,6 +117,7 @@ header nav form input:hover {
     border-left: 0.1em solid hsla(206, 63%, 73%, 1);
     border-top: 0.1em solid hsla(206, 63%, 73%, 1);
     transition: border-left 0.2s, border-top 0.2s 0.1s, border-right 0.2s 0.2s, border-bottom 0.2s 0.3s;
+    transition: width 0.2s;
 }
 
 
@@ -170,11 +171,12 @@ header nav form {
     align-items: baseline;
 }
 
-input[type="image"] {
+header nav form img {
     height: 5vh;
     margin: 2vh 0 1vh 0;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
+    cursor: pointer;
 }
 
 input {
@@ -191,6 +193,58 @@ label[for="search"] + input {
     padding: 1vh;
     border: 0.1em solid #999a9c;
     border-radius: .3em;
+
+}
+
+.visible {
+    display: inherit!important;
+    align-self: flex-start;
+    margin: 2vh -.1em 0 0;
+    width: 15vw;
+    animation: rightLeft .3s;
+}
+
+@keyframes rightLeft {
+  0% {
+    transform: translateX(10vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.results  {
+    position: absolute;
+    right: 9vw;
+    top: 3.4em;
+    background: white;
+    z-index: 1;
+    box-shadow: .1em .1em .3em gray;
+    transform: translateY(-20em);
+    opacity: 0;
+    transition: all .3s;
+}
+
+.searchShow {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+header div ul li {
+    padding: 1em 5.5vw 1em 1vw;
+    cursor: pointer;
+}
+
+header div ul li:hover {
+    background: lightgray;
+}
+
+header div ul li a {
+    font-family: "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
+    color: black;
+    text-decoration: none;
 }
 
 label[for="aantal"],
@@ -408,6 +462,11 @@ form fieldset + label + input:active {
     transition: all .2s;
 }
 
+nav form {
+    display: flex;
+    flex-direction: row;
+}
+
 /*
 =====================================
              MAIN
@@ -416,13 +475,25 @@ form fieldset + label + input:active {
 
 header + section {
     font-family: "DFDS-bold", "Segoe UI", "Lucida Grande", "Helvetica Neue", Arial, sans-serif;
-    font-size: 1.9em;
+    font-size: 2em;
     text-transform: uppercase;
     color: #003251;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 3vh 0;
+    padding-bottom: 1em;
+}
+
+header + section > div {
+    position: relative;
+    width: 10em;
+}
+
+header + section > div div {
+    display: flex;
+    position: absolute;
+    right: 0;
 }
 
 section form input {
@@ -595,6 +666,10 @@ section + section > div:nth-child(1) {
     justify-content: space-between;
 }
 
+.hidden {
+    display: none;
+}
+
 /*
 =====================================
                NAV
@@ -727,11 +802,6 @@ nav ul li:hover > ul {
 }
 
 @media (min-width: 70em) {
-    label[for="search"] + input {
-        display: inherit;
-        margin: 2vh -.1em 0 0;
-        align-self: flex-start;
-    }
     nav form {
         display: flex;
         flex-direction: row;
@@ -825,6 +895,66 @@ section > h3 + div a:nth-child(1) article {
  background-position: left;
 }
 
+/*
+=====================================
+             VERHALEN
+=====================================
+*/
+.verhaal {
+    margin: 0;
+    width: 100%;
+}
+
+.verhaal img {
+    width: 100%;
+}
+
+.desktop {
+    display: none;
+}
+
+.tablet {
+    display: none;
+}
+
+.vast_desktop {
+    display: none;
+    position: fixed;
+    z-index: -1;
+}
+
+@media (min-width: 50em) {
+    .tablet {
+        display: block;
+    }
+
+    .dekstop {
+        display: none;
+    }
+
+    .mobiel {
+        display: none;
+    }
+}
+
+
+@media (min-width: 80em) {
+    .desktop {
+        display: block;
+    }
+
+    .mobiel {
+        display: none;
+    }
+
+    .tablet {
+        display: none;
+    }
+
+    .vast_desktop {
+        display: block;
+    }
+}
 /*
 =====================================
              VERHAAL.HTML

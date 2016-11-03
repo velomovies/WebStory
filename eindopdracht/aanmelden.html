@@ -18,13 +18,20 @@
         </div>
 
         <nav>
-            <form action="#">
+            <form>
                 <label for="search">Zoeken</label>
-                <input id="search" type="search" required placeholder="Zoeken">
-                <input type="image" src="images/search.svg" alt="Submit">
+                <input id="search" type="search" placeholder="Zoeken">
+                <img src="images/search.svg" alt="Zoek Knop">
             </form>
-            <a href="index.html"><img src="images/account.svg" alt="Persoon"></a>
+            <a href="index.html"><img src="images/home.svg" alt="Persoon"></a>
         </nav>
+        <div class="results">
+            <ul>
+                <li><a href="hyperbool.html">Hyperbool</a></li>
+                <li><a href="kinderboek.html">Kinderboek</a></li>
+                <li><a href="klumperbeven.html">Klumperbeven</a></li>
+            </ul>
+        </div>
     </header>
 
     <div>
@@ -36,14 +43,14 @@
         </aside>
 
         <!-- AANMELD FORMULIER -->
-        <form action="#">
+        <form action="index.html">
             <fieldset>
                 <legend>Wie bent u?</legend>
                 <label>Voornaam: <input type="text" required></label>
                 <label>Achternaam: <input type="text" required></label>
                 <label>Emailadres: <input type="email" required placeholder="mail@example.com"></label>
-                <label>Gebruikersnaam: <input type="text" required></label>
-                <label>Wachtwoord: <input type="password" required></label>
+                <label>Gebruikersnaam: <input type="text" required value="Jan"></label>
+                <label>Wachtwoord: <input type="password" required value="1234"></label>
             </fieldset>
             <fieldset>
                 <legend>Wat voor verhalen wilt u lezen?</legend>
@@ -55,12 +62,14 @@
                     <label><input type="checkbox" value="genre"><span>Non - Fictie</span></label>
                     <label><input type="checkbox" value="genre"><span>Politiek</span></label>
                 </div>
-                <label>Gemiddeld:<input type="number" placeholder="10">minuten</label>
+                <label>Gemiddeld:<input type="number" placeholder="10" max="999" min="0">minuten</label>
                 <p>Dit kunt u later nog aanpassen!</p>
             </fieldset>
             <label for="aanmelden">Aanmelden</label><input id="aanmelden" type="submit" value="Aanmelden">
         </form>
     </div>
+    <!-- JAVASCRIPT -->
+    <script src="js/main.js"></script>
 
 </body>
 
