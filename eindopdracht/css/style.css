@@ -218,7 +218,7 @@ label[for="search"] + input {
 .results  {
     position: absolute;
     right: 9vw;
-    top: 3.4em;
+    top: 6vh;
     background: white;
     z-index: 1;
     box-shadow: .1em .1em .3em gray;
@@ -262,7 +262,7 @@ label[for="inlog"] {
 */
 
 header + div aside {
-    background-image: url(../images/boekenkast.jpg);
+    background-image: url(../images/achtergrond/boekenkast.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -548,6 +548,11 @@ section footer + div p {
     display: none;
 }
 
+.verhalenSectieOne footer + div p,
+.verhalenSectieTwo footer + div p {
+    display: none;
+}
+
 section h3 + div h4,
 section h3 + div p {
     color: #eaedee;
@@ -578,17 +583,23 @@ section > h3 + div article {
     justify-content: space-between;
     background-color: white;
     padding: 0 1em 1em;
-    background-image: url(../images/voorkeuren.png);
     background-size: cover;
     background-position: center;
     border-right: 0.1em solid #eaedee;
     border-bottom: 0.1em solid #eaedee;
     border-left: 0.1em solid #eaedee;
     border-top: 0.1em solid #eaedee;
-    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s, transform .3s, box-shadow .3s;
     margin: 1em .5em 1em .5em;
     width: 85vw;
     height: 45vh;
+    min-height: 20em;
+}
+
+section > h3 + div article:hover {
+    transform: scale(1.01);
+    box-shadow: .1em .1em .5em lightgray;
+    transition: all .3s;
 }
 
 section div a {
@@ -643,6 +654,7 @@ section + section article {
     justify-content: space-between;
     background-color: #eaedee;
     height: 40vh;
+    min-height: 20em;
     margin-left: 5vw;
     margin-bottom: 1em;
     padding: .5em;
@@ -651,10 +663,17 @@ section + section article {
     border-bottom: 0.1em solid hsla(255, 100%, 100%, 1);
     border-left: 0.1em solid hsla(255, 100%, 100%, 1);
     border-top: 0.1em solid hsla(255, 100%, 100%, 1);
-    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s;
-    background-image: url(../images/verhalen.png);
+    transform: scale(1);
+    transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s, transform .3s, box-shadow .3s;
+    background-image: url(../images/achtergrond/verhalen.png);
     background-size: cover;
     background-position: center;
+}
+
+section + section article:hover {
+    transform: scale(1.03);
+    box-shadow: .1em .1em .5em lightgray;
+    transition: all .3s;
 }
 
 main section + section {
@@ -764,7 +783,7 @@ nav ul li:hover > ul {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column-reverse;
-        background-image: url(../images/boekenkast_schuin.png);
+        background-image: url(../images/achtergrond/boekenkast_schuin.png);
         background-size: cover;
         background-position: center;
         margin: 3vh 5vw;
@@ -892,8 +911,93 @@ nav ul li:hover > ul {
 */
 
 section > h3 + div a:nth-child(1) article {
- background-position: left;
+    background-image: url(../images/achtergrond/voorkeuren-1.png);
 }
+
+section > h3 + div a:nth-child(2) article {
+    background-image: url(../images/achtergrond/voorkeuren-2.png);
+}
+
+section > h3 + div a:nth-child(3) article {
+    background-image: url(../images/achtergrond/voorkeuren-3.png);
+}
+
+section > h3 + div a:nth-child(4) article {
+    background-image: url(../images/achtergrond/voorkeuren-4.png);
+}
+
+section > h3 + div a:nth-child(5) article {
+    background-image: url(../images/achtergrond/voorkeuren-5.png);
+}
+
+.verhalenSectieOne a:nth-child(1) article {
+    background-image: url(../images/achtergrond/verhaal-1.png);
+}
+
+.verhalenSectieOne a:nth-child(2) article {
+    background-image: url(../images/achtergrond/verhaal-2.png);
+}
+
+.verhalenSectieOne a:nth-child(3) article {
+    background-image: url(../images/achtergrond/verhaal-3.png);
+}
+
+.verhalenSectieOne a:nth-child(4) article {
+    background-image: url(../images/achtergrond/verhaal-4.png);
+}
+
+.verhalenSectieOne a:nth-child(5) article {
+    background-image: url(../images/achtergrond/verhaal-5.png);
+}
+
+.verhalenSectieOne a:nth-child(6) article {
+    background-image: url(../images/achtergrond/verhaal-6.png);
+}
+
+.verhalenSectieOne a:nth-child(7) article {
+    background-image: url(../images/achtergrond/verhaal-7.png);
+}
+
+.verhalenSectieOne a:nth-child(8) article {
+    background-image: url(../images/achtergrond/verhaal-8.png);
+}
+
+.verhalenSectieOne a:nth-child(8) article {
+    background-image: url(../images/achtergrond/verhaal-8.png);
+}
+
+.verhalenSectieTwo a:nth-child(1) article {
+    background-image: url(../images/achtergrond/verhaal-8.png);
+}
+
+.verhalenSectieTwo a:nth-child(2) article {
+    background-image: url(../images/achtergrond/verhaal-7.png);
+}
+
+.verhalenSectieTwo a:nth-child(3) article {
+    background-image: url(../images/achtergrond/verhaal-6.png);
+}
+
+.verhalenSectieTwo a:nth-child(4) article {
+    background-image: url(../images/achtergrond/verhaal-5.png);
+}
+
+.verhalenSectieTwo a:nth-child(5) article {
+    background-image: url(../images/achtergrond/verhaal-4.png);
+}
+
+.verhalenSectieTwo a:nth-child(6) article {
+    background-image: url(../images/achtergrond/verhaal-3.png);
+}
+
+.verhalenSectieTwo a:nth-child(7) article {
+    background-image: url(../images/achtergrond/verhaal-2.png);
+}
+
+.verhalenSectieTwo a:nth-child(8) article {
+    background-image: url(../images/achtergrond/verhaal-1.png);
+}
+
 
 /*
 =====================================
