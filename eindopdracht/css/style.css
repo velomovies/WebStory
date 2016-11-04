@@ -934,74 +934,45 @@ section > h3 + div a:nth-child(5) article {
     background-image: url(../images/achtergrond/voorkeuren-5.png);
 }
 
-.verhalenSectieOne a:nth-child(1) article {
-    background-image: url(../images/achtergrond/verhaal-1.png);
-}
-
-.verhalenSectieOne a:nth-child(2) article {
-    background-image: url(../images/achtergrond/verhaal-2.png);
-}
-
-.verhalenSectieOne a:nth-child(3) article {
-    background-image: url(../images/achtergrond/verhaal-3.png);
-}
-
-.verhalenSectieOne a:nth-child(4) article {
-    background-image: url(../images/achtergrond/verhaal-4.png);
-}
-
-.verhalenSectieOne a:nth-child(5) article {
-    background-image: url(../images/achtergrond/verhaal-5.png);
-}
-
-.verhalenSectieOne a:nth-child(6) article {
-    background-image: url(../images/achtergrond/verhaal-6.png);
-}
-
-.verhalenSectieOne a:nth-child(7) article {
-    background-image: url(../images/achtergrond/verhaal-7.png);
-}
-
-.verhalenSectieOne a:nth-child(8) article {
-    background-image: url(../images/achtergrond/verhaal-8.png);
-}
-
-.verhalenSectieOne a:nth-child(8) article {
-    background-image: url(../images/achtergrond/verhaal-8.png);
-}
-
-.verhalenSectieTwo a:nth-child(1) article {
-    background-image: url(../images/achtergrond/verhaal-8.png);
-}
-
-.verhalenSectieTwo a:nth-child(2) article {
-    background-image: url(../images/achtergrond/verhaal-7.png);
-}
-
-.verhalenSectieTwo a:nth-child(3) article {
-    background-image: url(../images/achtergrond/verhaal-6.png);
-}
-
-.verhalenSectieTwo a:nth-child(4) article {
-    background-image: url(../images/achtergrond/verhaal-5.png);
-}
-
-.verhalenSectieTwo a:nth-child(5) article {
-    background-image: url(../images/achtergrond/verhaal-4.png);
-}
-
-.verhalenSectieTwo a:nth-child(6) article {
-    background-image: url(../images/achtergrond/verhaal-3.png);
-}
-
-.verhalenSectieTwo a:nth-child(7) article {
-    background-image: url(../images/achtergrond/verhaal-2.png);
-}
-
+.verhalenSectieOne a:nth-child(1) article,
 .verhalenSectieTwo a:nth-child(8) article {
     background-image: url(../images/achtergrond/verhaal-1.png);
 }
 
+.verhalenSectieOne a:nth-child(2) article,
+.verhalenSectieTwo a:nth-child(7) article {
+    background-image: url(../images/achtergrond/verhaal-2.png);
+}
+
+.verhalenSectieOne a:nth-child(3) article,
+.verhalenSectieTwo a:nth-child(6) article {
+    background-image: url(../images/achtergrond/verhaal-3.png);
+}
+
+.verhalenSectieOne a:nth-child(4) article,
+.verhalenSectieTwo a:nth-child(5) article {
+    background-image: url(../images/achtergrond/verhaal-4.png);
+}
+
+.verhalenSectieOne a:nth-child(5) article,
+.verhalenSectieTwo a:nth-child(4) article {
+    background-image: url(../images/achtergrond/verhaal-5.png);
+}
+
+.verhalenSectieOne a:nth-child(6) article,
+.verhalenSectieTwo a:nth-child(3) article {
+    background-image: url(../images/achtergrond/verhaal-6.png);
+}
+
+.verhalenSectieOne a:nth-child(7) article,
+.verhalenSectieTwo a:nth-child(2) article {
+    background-image: url(../images/achtergrond/verhaal-7.png);
+}
+
+.verhalenSectieOne a:nth-child(8) article,
+.verhalenSectieTwo a:nth-child(1) article {
+    background-image: url(../images/achtergrond/verhaal-8.png);
+}
 
 /*
 =====================================
@@ -1033,6 +1004,9 @@ section > h3 + div a:nth-child(5) article {
 }
 
 @media (min-width: 70em) {
+    .headerverhaal {
+        margin-top: -4vh;
+    }
     .tablet {
         display: block;
     }
