@@ -162,7 +162,6 @@ header a img {
 
 .headerverhaal {
     position: fixed;
-    margin-top: -4vh;
     width: 100%;
     box-shadow: .1em .1em 1em #999a9c;
 }
@@ -599,7 +598,6 @@ section > h3 + div article {
     margin: 1em .5em 1em .5em;
     width: 85vw;
     height: 45vh;
-    min-height: 20em;
 }
 
 section > h3 + div article:hover {
@@ -660,7 +658,6 @@ section + section article {
     justify-content: space-between;
     background-color: #eaedee;
     height: 40vh;
-    min-height: 20em;
     margin-left: 5vw;
     margin-bottom: 1em;
     padding: .5em;
@@ -671,7 +668,6 @@ section + section article {
     border-top: 0.1em solid hsla(255, 100%, 100%, 1);
     transform: scale(1);
     transition: border-left 0.2s 0.3s, border-top 0.2s 0.2s, border-right 0.2s 0.1s, border-bottom 0.2s, transform .3s, box-shadow .3s;
-    background-image: url(../images/achtergrond/verhalen.png);
     background-size: cover;
     background-position: center;
 }
@@ -1036,7 +1032,7 @@ section > h3 + div a:nth-child(5) article {
     z-index: -1;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 70em) {
     .tablet {
         display: block;
     }
